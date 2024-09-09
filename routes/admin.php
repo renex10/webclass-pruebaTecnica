@@ -33,4 +33,8 @@ Route::get('/calificaciones', function () {
 
 
 //creando las rutas para capacitaciones
-Route::resource('/capacitaciones',TrainingController::class);
+//Route::resource('/capacitaciones',TrainingController::class);
+/* Route::resource('capacitaciones', TrainingController::class)->names('admin.capacitaciones'); */
+Route::resource('capacitaciones', TrainingController::class)->parameters([
+    'capacitaciones' => 'training',
+]);

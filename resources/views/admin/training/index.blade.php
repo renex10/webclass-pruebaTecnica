@@ -1,22 +1,13 @@
 <x-admin-layout>
+    <div class="relative">
+        <a
+          class="absolute right-0 mb-5 rounded border border-current px-4 py-3 text-sm font-medium text-indigo-600 transition hover:rotate-2 hover:scale-110 focus:outline-none focus:ring active:text-indigo-500"
+          href="{{ route('admin.capacitaciones.create') }}"
+        >
+         + Agregar nueva capacitación
+        </a>
+    </div>
 
-<!-- Border - Right -->
-
-<div class="relative">
-    <a
-      class="absolute right-0 mb-5 rounded border border-current px-4 py-3 text-sm font-medium text-indigo-600 transition hover:rotate-2 hover:scale-110 focus:outline-none focus:ring active:text-indigo-500"
-      href="{{ route('admin.capacitaciones.create') }}"
-    >
-     + agregar nueva capacitacion
-    </a>
-  </div>
-  
-
-{{--     <div class="flex justify-end mb-5"> --}}
-        <!-- Botón nueva capacitación -->
-{{-- <a href="{{ route('admin.capacitaciones.create') }}">nueva capacitacion</a> --}}
-
-  {{--   </div> --}}
     <div class="container mx-auto px-4 py-8">
         <h1 class="text-2xl font-bold mb-6">Lista de Capacitaciones</h1>
 
@@ -37,7 +28,7 @@
                     <tr>
                         <td class="px-6 py-4 border-b text-sm">{{ $training->id }}</td>
                         <td class="px-6 py-4 border-b text-sm">{{ $training->topic }}</td>
-                        <td class="px-6 py-4 border-b text-sm">{{ $training->date }}</td>
+                        <td class="px-6 py-4 border-b text-sm">{{ $training->training_date }}</td>
                         <td class="px-6 py-4 border-b text-sm">{{ $training->type }}</td>
                         <td class="px-6 py-4 border-b text-sm">
                             {{ $training->attendances->where('attended', true)->count() }} Asistentes
