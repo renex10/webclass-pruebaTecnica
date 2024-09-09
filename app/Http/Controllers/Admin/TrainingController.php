@@ -61,7 +61,7 @@ class TrainingController extends Controller
      */
     public function show(Training $training)
     {
-        // Aquí podrías agregar la lógica para mostrar detalles de una capacitación específica
+        return view('admin.training.show', compact('training'));
     }
 
     /**
