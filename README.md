@@ -9,32 +9,57 @@
 </p>
 
 
+# Nombre del Proyecto
 
+sistema educacional 
+## Instalación
+
+Sigue estos pasos para instalar y configurar el proyecto:
+
+1. **Clona el repositorio:**
+
+   ```bash
+   git clone https://github.com/renex10/webclass-pruebaTecnica.git
+   cd webclass-pruebaTecnica
+
+2. instalar las despendecias del backend
+
+```bash
+composer install
+```
+
+3. Copia el archivo .env.example y renómbralo a .env: 
+```bash
+cp .env.example .env
+```
+
+4. Genera la clave de aplicación:
+```bash
+php artisan key:generate
+```
+
+5. Ejecuta las migraciones y siembras la base de datos:
 ```bash
 php artisan migrate:refresh --seed
 ```
-6. Instalar dependencias de frontend:
 
+6. Instala las dependencias de frontend:
 ```bash
 npm install
 ```
 
-7. Compilar los assets para compilar los assets con Laravel Mix:
-
+7. Compila los los estilos de tailwind y alpine js para el dashboard:
 ```bash
-npm run dev
+npm run build
 ```
-
-8. Iniciar el servidor de desarrollo
-Finalmente, puedes levantar el servidor local de Laravel con el siguiente comando:
-
+8. servidor de desarrollo 
 ```bash
 php artisan serve
 ```
-Por defecto, el proyecto estará disponible en http://localhost:8000.
 
 
-credenciales adicionales una vez agregadas los seeder, estas credenciales estan agregadas ya por defecto
+
+###credenciales adicionales una vez agregadas los seeder, estas credenciales estan agregadas ya por defecto###
 
             'name'=> richard,
             'email'=> richard@gmail.com,
